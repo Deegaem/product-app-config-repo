@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-api-deployment
+  namespace: product
+spec:
+  selector:
+    matchLabels:
+      app: product-api
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: product-api
+    spec:
+      containers:
+      - name: product-api
+        image: product-app:1.0 
+        ports:
+        - containerPort: 8080
