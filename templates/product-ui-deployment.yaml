@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: product-ui-deployment
-  namespace: product
+  namespace: product-ui
 spec:
   selector:
     matchLabels:
