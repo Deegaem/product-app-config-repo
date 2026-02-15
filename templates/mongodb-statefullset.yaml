@@ -2,13 +2,13 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongodb
-  namespace: product-api
+  namespace: product-app
 spec:
   selector:
     matchLabels:
       app: mongodb
   serviceName: mongodb
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
