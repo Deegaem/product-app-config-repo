@@ -15,18 +15,18 @@ spec:
     spec:
       containers:
       - name: product-api
-        image: deegaem/product-api:1.0.0 
+        image: deegaem/product-api:1.0.11
         ports:
         - containerPort: 8080
-        # env:
-        #     - name: DB_HOST
-        #       valueFrom :
-        #         configMapKeyRef :
-        #           name : db-config
-        #           key :  host
+        env:
+            - name: DB_HOST
+              valueFrom :
+                configMapKeyRef :
+                  name : mongodb-configMap
+                  key :  db_Host
 
-        #     - name: DB_NAME
-        #       valueFrom :
-        #         configMapKeyRef :
-        #           name : db-config
-        #           key :  dbName
+            - name: DB_NAME
+              valueFrom :
+                configMapKeyRef :
+                  name : mongodb-configMap
+                  key :  db_Name

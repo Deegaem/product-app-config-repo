@@ -1,7 +1,7 @@
 apiVersion : v1
 kind : ConfigMap
 metadata:
-  name : db-config
+  name : mongodb-configMap
 data:
-  host : mongodb
-  dbName: product-db
+ db_Host : mongodb
+ db_Name: product-db
