@@ -23,6 +23,17 @@ spec:
         volumeMounts:
         - name: csi-pvc
           mountPath: /data/db
+        env:
+          - name: "MONGO_INITDB_ROOT_USERNAME"
+            valueFrom:
+              configMapKeyRef:
+                name: mongodb-configmap
+                key: DB_USER
+          - name: "MONGO_INITDB_ROOT_PASSWORD"
+            valueFrom:
+              secretKeyRef:
+                name: mongodb-secret
+                key: DB_PASSWORD              
   volumeClaimTemplates:
   - metadata:
       name: csi-pvc
