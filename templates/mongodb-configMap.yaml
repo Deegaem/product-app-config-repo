@@ -9,12 +9,4 @@ data:
  DB_HOST: mongo
  DB_NAME: mongodb
 
- 
- #mongodb-headless.namespace.svc.cluster.local
- #mongodb.product-app.svc.cluster.local
- #mongodb://10.150.0.70:27017/product-db
-
-#mongodb://sample_user:957Le-8r9@mongodb.product-app.svc.cluster.local/ product-db?authSource=admin
-#mongodb://<username>:<password>@mongodb-service/dbname?authSource=admin
-#mongodb://<username>:<password>@mongodb-service/
 

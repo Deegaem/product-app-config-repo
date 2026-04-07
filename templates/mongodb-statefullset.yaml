@@ -19,7 +19,6 @@ spec:
         image: mongo:latest
         ports:
         - containerPort: 27017
-#          name: mongodb
         volumeMounts:
         - name: csi-pvc
           mountPath: /data/db
