@@ -26,5 +26,4 @@ spec:
             mountPath: /var/jenkins_vol
       volumes:
         - name: jenkins-vol
-          persistentVolumeClaim:
-            claimName: jenkins-storage
+          emptyDir: {}
