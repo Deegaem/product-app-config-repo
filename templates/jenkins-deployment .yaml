@@ -16,6 +16,9 @@ spec:
       containers:
       - name: jenkins
         image: jenkins/jenkins:lts
+        env:
+          - name: Djenkins.install.runSetupWizard
+            value: false
         ports:
           - name: http-port
             containerPort: 8080
