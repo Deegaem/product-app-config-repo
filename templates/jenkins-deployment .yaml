@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: deegaem/jenkins-image
+        image: deegaem/jenkins-image:1.0.0
         # #Configuring the Container to Run With root User by Default
         # securityContext:
         #   runAsUser: 0 
