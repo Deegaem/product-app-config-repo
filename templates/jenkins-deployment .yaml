@@ -15,11 +15,7 @@ spec:
     spec:
       containers:
       - name: jenkins
-        image: deegaem/jenkins-image:1.0.2
-        # #Configuring the Container to Run With root User by Default
-        # securityContext:
-        #   runAsUser: 0 
-        #   runAsGroup: 0
+        image: jenkins/jenkins
         ports:
           - name: http-port
             containerPort: 8080
