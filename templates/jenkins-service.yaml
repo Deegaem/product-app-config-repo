@@ -5,23 +5,12 @@ metadata:
   namespace: jenkins
 spec:
   type: ClusterIP
-  ports:
-    - port: 8080
-      targetPort: 8080
   selector:
     app: jenkins
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: jenkins-jnlp
-  namespace: jenkins
-spec:
-  type: ClusterIP
   ports:
-    - port: 50000
-      targetPort: 50000
-  selector:
-    app: jenkins
+  - name: http
+    port: 8080
+    targetPort: 8080
+  - name: agent
+    port: 50000
+    targetPort: 50000

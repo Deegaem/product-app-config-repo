@@ -19,12 +19,10 @@ spec:
             runAsUser: 1000
       containers:
       - name: jenkins
-        image: jenkins/jenkins
+        image: jenkins/jenkins:lts
         ports:
-          - name: http-port
-            containerPort: 8080
-          - name: jnlp-port
-            containerPort: 50000
+          - containerPort: 8080
+          - containerPort: 50000
         volumeMounts:
           - name: jenkins-vol
             mountPath: /var/jenkins_home
