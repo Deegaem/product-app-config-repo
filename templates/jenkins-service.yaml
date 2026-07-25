@@ -8,9 +8,9 @@ spec:
   selector:
     app: jenkins
   ports:
-  - name: http
+  - name: httpport
     port: 8080
     targetPort: 8080
-  - name: agent
+  - name: jnlpport
     port: 50000
     targetPort: 50000
