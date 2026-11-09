@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: product-ui
-        image: deegaem/product-app-ui:1.0.5
+        image: deegaem/product-app-ui:1.0.6
         ports:
         - containerPort: 80 
