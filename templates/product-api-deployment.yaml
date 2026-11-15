@@ -18,15 +18,15 @@ spec:
         image: deegaem/product-api:1.0.18
         ports:
         - containerPort: 8080
-        # env:
-        #     - name: MONGO_URI
-        #       valueFrom :
-        #         configMapKeyRef :
-        #           name : mongodb-configmap
-        #           key :  mongo_uri
+        env:
+            - name: MONGO_URI
+              valueFrom :
+                configMapKeyRef :
+                  name : mongodb-configmap
+                  key :  mongo_uri
 
-        #     - name: DB_NAME
-        #       valueFrom :
-        #         configMapKeyRef :
-        #           name : mongodb-configmap
-        #           key :  db_Name
+            - name: DB_NAME
+              valueFrom :
+                configMapKeyRef :
+                  name : mongodb-configmap
+                  key :  db_Name
