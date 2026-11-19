@@ -4,9 +4,7 @@ metadata:
   name: mongodb-configmap
   namespace: product-app
 data:
- mongo_uri: mongodb://mongodb.product-app.svc.cluster.local/
  DB_USER: sample_user
- DB_HOST: mongo
- DB_NAME: mongodb
+ 
 
 
